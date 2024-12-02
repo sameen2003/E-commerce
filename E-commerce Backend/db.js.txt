@@ -1,0 +1,13 @@
+const { Pool } = require('pg');
+
+// PostgreSQL connection details
+const pool = new Pool({
+    user: 'postgres',         // Replace with your PostgreSQL username
+    host: 'localhost',        // Replace with your host if not localhost
+    database: 'ecommerce',    // Replace with your database name
+    password: 'yourpassword', // Replace with your PostgreSQL password
+    port: 5432,               // Default PostgreSQL port
+});
+
+// Export the pool for use in other files
+module.exports = pool;
